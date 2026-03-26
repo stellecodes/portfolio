@@ -17,10 +17,10 @@ const projects = [
   },
   {
     id: "upskin",
-    title: "UpSkin AI",
+    title: "UpSkin",
     tags: ["Mobile", "Health", "AI"],
     description:
-      "A full-stack skincare companion featuring AI facial analysis and automated habit-tracking systems.",
+      "A full-stack skincare companion featuring image facial analysis, habit-tracking systems and AI-driven product recommendations.",
   },
   {
     id: "classconnect",
@@ -36,12 +36,29 @@ const leadershipAndVia = [
     title: "Leadership Experience",
     items: [
       {
-        role: "Year 2 Computer Science Representative",
-        desc: "Liaising between faculty and a cohort of 800+ students to improve curriculum delivery and student welfare.",
+        role: "NUS School of Computing Orientation Group Leader",
+        year: "2025",
+        desc: "",
       },
       {
-        role: "Project Lead, NUS Orbital",
-        desc: "Guided a development team through the full SDLC, achieving the highest 'Apollo 11' certification level.",
+        role: "Ridge View Residential College Orientation Group Leader",
+        year: "2025",
+        desc: "",
+      },
+      {
+        role: "VJC Art Club Vice President",
+        year: "2022 - 2023",
+        desc: "",
+      },
+      {
+        role: "VJC Open House Facilitator",
+        year: "2023",
+        desc: "",
+      },
+      {
+        role: "VJC Orientation Group Leader",
+        year: "2023",
+        desc: "",
       },
     ],
   },
@@ -49,12 +66,24 @@ const leadershipAndVia = [
     title: "Community & VIA",
     items: [
       {
-        role: "Digital Literacy Volunteer",
-        desc: "Conducting workshops for seniors to bridge the silver digital divide in Singapore.",
+        role: "Volunteer at AWWA Early Intervention Centre @ Hougang",
+        year: "2026",
+        desc: "Helped facilitate activities for childred with special needs",
       },
       {
-        role: "Accessibility Auditor",
-        desc: "Evaluating campus infrastructure (BIZ2) to propose data-driven architectural solutions for inclusive access.",
+        role: "Volunteer at MINDS @ Hougang",
+        year: "2026",
+        desc: "Accompanied intellectually disabled individuals in activities to promote social interaction and community integration",
+      },
+      {
+        role: "Accessibility Audit of NUS BIZ2 Building",
+        year: "2026",
+        desc: "Evaluated the accessibility of the building in accordance to universal design principle and BCA guidelines, and provided recommendations for improvement",
+      },
+      {
+        role: "Volunteer Tutor with Heartware Network",
+        year: "2023",
+        desc: "Provided weekly online tuition to underprivileged primary school students.",
       },
     ],
   },
@@ -70,7 +99,8 @@ export default function Home() {
             Stelle Lim.
           </h1>
           <p className="text-2xl md:text-3xl text-gray-600 leading-tight max-w-2xl font-medium">
-            CS & Statistics student at NUS building at the intersection of{" "}
+            Computer Science & Statistics student at NUS building at the
+            intersection of{" "}
             <span className="text-blue-600">data engineering</span> and{" "}
             <span className="text-blue-600">human-centric design</span>.
           </p>
@@ -106,7 +136,7 @@ export default function Home() {
                     {p.description}
                   </p>
                   <p className="text-blue-600 font-bold text-sm inline-flex items-center">
-                    Case Study{" "}
+                    See more{" "}
                     <span className="ml-2 group-hover:translate-x-1 transition-transform">
                       →
                     </span>
@@ -156,18 +186,30 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
             {leadershipAndVia.map((section) => (
               <div key={section.title}>
-                <h3 className="text-2xl font-bold mb-10 text-gray-900">
+                <h3 className="text-2xl font-bold mb-10 text-gray-900 border-b border-gray-100 pb-4">
                   {section.title}
                 </h3>
-                <div className="space-y-12">
+                <div className="space-y-8">
+                  {" "}
+                  {/* Reduced general spacing */}
                   {section.items.map((item) => (
-                    <div key={item.role}>
-                      <h4 className="font-bold text-gray-900 mb-3 text-lg">
-                        {item.role}
-                      </h4>
-                      <p className="text-gray-500 text-sm leading-relaxed">
-                        {item.desc}
-                      </p>
+                    <div
+                      key={item.role}
+                      className={item.desc ? "mb-6" : "mb-2"}
+                    >
+                      <div className="flex justify-between items-baseline gap-4 mb-1">
+                        <h4 className="font-bold text-gray-900 text-lg leading-tight">
+                          {item.role}
+                        </h4>
+                        <span className="text-xs font-bold text-blue-600 whitespace-nowrap uppercase tracking-wider">
+                          {item.year}
+                        </span>
+                      </div>
+                      {item.desc && (
+                        <p className="text-gray-500 text-sm leading-relaxed mt-2">
+                          {item.desc}
+                        </p>
+                      )}
                     </div>
                   ))}
                 </div>
