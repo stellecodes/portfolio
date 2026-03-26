@@ -1,137 +1,206 @@
-import React from "react";
+import Link from "next/link";
 
-// Define your projects based on your background
 const projects = [
   {
-    title: "Eye-Tracking Accessibility App",
+    id: "portsense",
+    title: "PortSense Copilot",
+    tags: ["AI", "Python", "Data"],
     description:
-      "Developed an interface for users with motor impairments to navigate digital content using eye movement, focusing on gaze-contingent UI design.",
-    tags: ["Accessibility", "Python", "UI/UX"],
+      "An agentic AI assistant for maritime analysts that translates complex dashboard data into executive-ready insights.",
   },
   {
-    title: "BIZ2 Building Accessibility Audit",
+    id: "a-eyes",
+    title: "A-Eyes Gaze Assistant",
+    tags: ["Accessibility", "CV", "AI"],
     description:
-      "Conducted a comprehensive audit of campus infrastructure, identifying barriers for students with disabilities and proposing architectural solutions.",
-    tags: ["Research", "Inclusion", "Audit"],
+      "A hands-free educational tool using real-time eye-tracking and LLMs to help students with motor impairments interact with lecture content.",
   },
   {
-    title: "PSA Hackathon: Smart Dashboard Chatbot",
+    id: "upskin",
+    title: "UpSkin AI",
+    tags: ["Mobile", "Health", "AI"],
     description:
-      "Built an LLM-powered assistant to help users navigate complex logistics data via natural language queries.",
-    tags: ["LLM", "React", "Data Analytics"],
+      "A full-stack skincare companion featuring AI facial analysis and automated habit-tracking systems.",
   },
   {
+    id: "classconnect",
     title: "ClassConnect",
+    tags: ["SWE", "Java", "Backend"],
     description:
-      "A full-stack tutor address book application designed for streamlined student-teacher management.",
-    tags: ["Next.js", "TypeScript", "CRUD"],
+      "A CLI-optimized desktop application for tutors, built with a focus on rigorous software architecture and defensive programming.",
   },
 ];
 
-export default function Portfolio() {
+const leadershipAndVia = [
+  {
+    title: "Leadership Experience",
+    items: [
+      {
+        role: "Year 2 Computer Science Representative",
+        desc: "Liaising between faculty and a cohort of 800+ students to improve curriculum delivery and student welfare.",
+      },
+      {
+        role: "Project Lead, NUS Orbital",
+        desc: "Guided a development team through the full SDLC, achieving the highest 'Apollo 11' certification level.",
+      },
+    ],
+  },
+  {
+    title: "Community & VIA",
+    items: [
+      {
+        role: "Digital Literacy Volunteer",
+        desc: "Conducting workshops for seniors to bridge the silver digital divide in Singapore.",
+      },
+      {
+        role: "Accessibility Auditor",
+        desc: "Evaluating campus infrastructure (BIZ2) to propose data-driven architectural solutions for inclusive access.",
+      },
+    ],
+  },
+];
+
+export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-100">
-      {/* Skip to Content for Screen Readers */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-blue-600 focus:text-white"
-      >
-        Skip to main content
-      </a>
-
-      <header className="border-b border-gray-200 sticky top-0 bg-white/80 backdrop-blur-md z-10">
-        <nav
-          className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center"
-          aria-label="Main Navigation"
-        >
-          <span className="font-bold text-xl tracking-tight">
-            CS Student @ NUS
-          </span>
-          <div className="space-x-6">
-            <a
-              href="#projects"
-              className="hover:text-blue-600 focus:outline-2 focus:outline-blue-600 outline-offset-4"
-            >
-              Projects
-            </a>
-            <a
-              href="#about"
-              className="hover:text-blue-600 focus:outline-2 focus:outline-blue-600 outline-offset-4"
-            >
-              About
-            </a>
-          </div>
-        </nav>
-      </header>
-
-      <main id="main-content" className="max-w-4xl mx-auto px-6 py-16">
+    <div className="min-h-screen bg-white text-gray-900 font-sans pb-20 selection:bg-blue-100">
+      <div className="max-w-4xl mx-auto px-6">
         {/* Hero Section */}
-        <section className="mb-20">
-          <h1 className="text-5xl font-extrabold mb-6 text-gray-900 leading-tight">
-            Building software that{" "}
-            <span className="text-blue-600">everyone</span> can use.
+        <section className="py-24 md:py-32">
+          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight mb-8">
+            Stelle Lim.
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
-            I’m a Computer Science & Statistics student focusing on the
-            intersection of **Software Engineering** and **Usability**.
-            Currently preparing for GovTech's mission-driven tech initiatives.
+          <p className="text-2xl md:text-3xl text-gray-600 leading-tight max-w-2xl font-medium">
+            CS & Statistics student at NUS building at the intersection of{" "}
+            <span className="text-blue-600">data engineering</span> and{" "}
+            <span className="text-blue-600">human-centric design</span>.
           </p>
         </section>
 
         {/* Projects Grid */}
-        <section id="projects" className="mb-20">
-          <h2 className="text-3xl font-bold mb-10 flex items-center">
-            <span className="bg-blue-600 w-8 h-1 mr-4"></span>
-            Featured Impact
+        <section className="mb-32">
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-10">
+            Selected Projects
           </h2>
-          <div className="grid gap-8 md:grid-cols-2">
-            {projects.map((project, index) => (
-              <article
-                key={index}
-                className="group border border-gray-200 p-8 rounded-xl hover:border-blue-500 hover:shadow-lg transition-all focus-within:ring-2 focus-within:ring-blue-600"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {projects.map((p) => (
+              <Link
+                key={p.id}
+                href={`/projects/${p.id}`}
+                className="group block"
               >
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs font-semibold uppercase tracking-wider text-blue-700 bg-blue-50 px-2 py-1 rounded"
-                    >
-                      {tag}
+                <div className="p-10 rounded-[2rem] border border-gray-100 hover:border-blue-200 hover:shadow-2xl transition-all duration-500 bg-white h-full flex flex-col">
+                  <div className="flex gap-2 mb-6">
+                    {p.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[10px] font-bold uppercase tracking-widest text-blue-700 bg-blue-50 px-3 py-1 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="text-3xl font-bold group-hover:text-blue-600 transition-colors mb-4">
+                    {p.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                    {p.description}
+                  </p>
+                  <p className="text-blue-600 font-bold text-sm inline-flex items-center">
+                    Case Study{" "}
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform">
+                      →
                     </span>
-                  ))}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 leading-snug">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-              </article>
+              </Link>
             ))}
           </div>
         </section>
 
-        {/* The "Why Accessibility" Section - Perfect for your specific role */}
-        <section
-          id="about"
-          className="bg-gray-50 p-10 rounded-2xl border border-gray-100"
-        >
-          <h2 className="text-2xl font-bold mb-4">
-            Why Usability & Accessibility?
-          </h2>
-          <p className="text-gray-700 leading-relaxed mb-4 text-lg">
-            Through projects like the <strong>BIZ2 Accessibility Audit</strong>{" "}
-            and <strong>eye-tracking software</strong>, I've realized that great
-            code is meaningless if it excludes users. My goal is to build
-            digital public services that are intuitive for all citizens,
-            regardless of their physical or cognitive abilities.
-          </p>
+        {/* Skills / Focus Areas */}
+        <section className="mb-32 grid grid-cols-1 md:grid-cols-3 gap-16 border-t border-gray-100 pt-20">
+          <div>
+            <h3 className="font-bold text-gray-900 mb-4 uppercase text-xs tracking-widest">
+              Core Tech
+            </h3>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              TypeScript, Java, Python, React, Next.js, Express, PostgreSQL,
+              FastAPI.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-bold text-gray-900 mb-4 uppercase text-xs tracking-widest">
+              Focus Areas
+            </h3>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              Agentic AI, Computer Vision, UI/UX Accessibility, Quantitative
+              Analysis.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-bold text-gray-900 mb-4 uppercase text-xs tracking-widest">
+              Standards
+            </h3>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              SDLC Management, CI/CD, Automated Testing (JUnit, Supertest), WCAG
+              2.1.
+            </p>
+          </div>
         </section>
-      </main>
 
-      <footer className="max-w-4xl mx-auto px-6 py-12 border-t border-gray-100 text-center text-gray-500 text-sm">
-        <p>© 2026 • Built with accessibility in mind</p>
-      </footer>
+        {/* Leadership & VIA Section */}
+        <section id="leadership" className="mb-32">
+          <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-16">
+            Leadership & Impact
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+            {leadershipAndVia.map((section) => (
+              <div key={section.title}>
+                <h3 className="text-2xl font-bold mb-10 text-gray-900">
+                  {section.title}
+                </h3>
+                <div className="space-y-12">
+                  {section.items.map((item) => (
+                    <div key={item.role}>
+                      <h4 className="font-bold text-gray-900 mb-3 text-lg">
+                        {item.role}
+                      </h4>
+                      <p className="text-gray-500 text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 border-t border-gray-100 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Let&apos;s build something inclusive.
+          </h2>
+          <p className="text-gray-500 mb-10 max-w-lg mx-auto">
+            I&apos;m currently looking for Summer 2026 internships where I can
+            apply my skills in engineering and data.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 font-bold">
+            <Link
+              href="mailto:stelle@u.nus.edu"
+              className="bg-gray-900 text-white px-10 py-4 rounded-full hover:bg-blue-600 transition-all duration-300"
+            >
+              Email Me
+            </Link>
+            <Link
+              href="https://linkedin.com/in/stellelim"
+              className="bg-white text-gray-900 border border-gray-200 px-10 py-4 rounded-full hover:bg-gray-50 transition-all duration-300"
+            >
+              LinkedIn
+            </Link>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
