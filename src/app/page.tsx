@@ -147,58 +147,152 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills / Focus Areas */}
-        <section className="mb-32 grid grid-cols-1 md:grid-cols-3 gap-16 border-t border-gray-100 pt-20">
-          <div>
-            <h3 className="font-bold text-gray-900 mb-4 uppercase text-xs tracking-widest">
-              Core Tech
-            </h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              TypeScript, Java, Python, React, Next.js, Express, PostgreSQL,
-              FastAPI.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-bold text-gray-900 mb-4 uppercase text-xs tracking-widest">
-              Focus Areas
-            </h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              Agentic AI, Computer Vision, UI/UX Accessibility, Quantitative
-              Analysis.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-bold text-gray-900 mb-4 uppercase text-xs tracking-widest">
-              Standards
-            </h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              SDLC Management, CI/CD, Automated Testing (JUnit, Supertest), WCAG
-              2.1.
-            </p>
+        {/* Technical Foundation Section */}
+        <section className="mb-32 border-t border-gray-100 pt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+            {/* Column 1: Technical Expertise */}
+            <div>
+              <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-10">
+                Technical Expertise
+              </h2>
+              <div className="space-y-10">
+                <div>
+                  <h3 className="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wider">
+                    Languages & Frameworks
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Python, Java, JavaScript/TypeScript, C, R, Assembly
+                    Language, React, React Native (Expo), HTML/CSS, Next.js, and
+                    JavaFX.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wider">
+                    Systems & Infrastructure
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Express.js, FastAPI, PostgreSQL (Neon).
+                  </p>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Cloud hosting via Render (Backend) and Vercel (Frontend).
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wider">
+                    AI, Data & Real-time
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Pandas, NumPy, ScikitLearn, RESTful APIs, WebSockets.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wider">
+                    SWE
+                  </h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    E2E testing with Supertest, User Acceptance Testing, JUnit
+                    5.
+                  </p>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Git/GitHub, Agile Methodology with ClickUp.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Column 2: Academic Foundation */}
+            <div>
+              <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-10">
+                Key Coursework
+              </h2>
+              <div className="space-y-10">
+                <div>
+                  <h3 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wider">
+                    Software Systems & Architecture
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {["CS2103T", "CS2102", "CS2105", "CS2030S"].map((mod) => (
+                      <span
+                        key={mod}
+                        className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded"
+                      >
+                        {mod}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Focused on large-scale Software Engineering (Java/UML),
+                    Database Systems (SQL/Schema Design), Computer Networks, and
+                    Object-Oriented Programming.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wider">
+                    Low-Level & Operating Systems
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {["CS2106", "CS2100"].map((mod) => (
+                      <span
+                        key={mod}
+                        className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded"
+                      >
+                        {mod}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    In-depth study of Operating Systems (Processes/Concurrency)
+                    and Computer Organisation, including Assembly and hardware
+                    interaction.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wider">
+                    Algorithms & Artificial Intelligence
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {["CS2109S", "CS2040S"].map((mod) => (
+                      <span
+                        key={mod}
+                        className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded"
+                      >
+                        {mod}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    Rigorous foundation in Data Structures and Algorithms
+                    alongside Introduction to AI and Machine Learning.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Leadership & VIA Section */}
+        {/* Leadership & Impact Section */}
         <section id="leadership" className="mb-32">
           <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-16">
             Leadership & Impact
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+          <div className="space-y-24">
+            {" "}
+            {/* Stacks the two main sections (Leadership and VIA) */}
             {leadershipAndVia.map((section) => (
               <div key={section.title}>
                 <h3 className="text-2xl font-bold mb-10 text-gray-900 border-b border-gray-100 pb-4">
                   {section.title}
                 </h3>
-                <div className="space-y-8">
+                <div className="space-y-10">
                   {" "}
-                  {/* Reduced general spacing */}
+                  {/* Spacing between individual items */}
                   {section.items.map((item) => (
                     <div
                       key={item.role}
-                      className={item.desc ? "mb-6" : "mb-2"}
+                      className={item.desc ? "mb-8" : "mb-2"}
                     >
-                      <div className="flex justify-between items-baseline gap-4 mb-1">
-                        <h4 className="font-bold text-gray-900 text-lg leading-tight">
+                      <div className="flex justify-between items-baseline gap-4 mb-2">
+                        <h4 className="font-bold text-gray-900 text-xl leading-tight">
                           {item.role}
                         </h4>
                         <span className="text-xs font-bold text-blue-600 whitespace-nowrap uppercase tracking-wider">
@@ -206,7 +300,7 @@ export default function Home() {
                         </span>
                       </div>
                       {item.desc && (
-                        <p className="text-gray-500 text-sm leading-relaxed mt-2">
+                        <p className="text-gray-600 text-base leading-relaxed max-w-3xl">
                           {item.desc}
                         </p>
                       )}
