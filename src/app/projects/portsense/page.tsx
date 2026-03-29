@@ -18,7 +18,7 @@ export default function PortSenseProject() {
           </h1>
           <p className="text-2xl text-gray-600 font-medium text-balance">
             Analysis at Your Fingertips: AI-Powered Conversational Analytics for
-            Global Port Operations [cite: 1016, 1017]
+            Global Port Operations
           </p>
           <div className="flex flex-wrap gap-3 mt-6">
             <span className="px-3 py-1 bg-gray-100 rounded-full text-sm font-semibold text-gray-700">
@@ -50,10 +50,9 @@ export default function PortSenseProject() {
             <p className="text-lg text-gray-700 leading-relaxed">
               To eliminate "visual overload" and "context switching" for
               maritime analysts by providing a conversational interface that
-              interprets live dashboards and delivers executive-ready
-              insights[cite: 1045, 1046, 1065]. The objective is a "single-click
-              insight" and "one definition of truth" across global
-              operations[cite: 1058, 1060].
+              interprets live dashboards and delivers executive-ready insights.
+              The objective is a "single-click insight" and "one definition of
+              truth" across global operations.
             </p>
           </div>
         </div>
@@ -69,15 +68,15 @@ export default function PortSenseProject() {
               <ul className="text-blue-800 space-y-2 text-sm leading-relaxed">
                 <li>
                   • <strong>React & Vite:</strong> Delivers a highly responsive,
-                  low-latency user interface[cite: 1078, 1079].
+                  low-latency user interface.
                 </li>
                 <li>
                   • <strong>Python Backend:</strong> Robust server-side logic
-                  for complex maritime data orchestration[cite: 1081, 1092].
+                  for complex maritime data orchestration.
                 </li>
                 <li>
                   • <strong>LangChain:</strong> Orchestrates the agentic
-                  workflow to manage tool selection and memory[cite: 1083].
+                  workflow to manage tool selection and memory.
                 </li>
               </ul>
             </div>
@@ -86,16 +85,15 @@ export default function PortSenseProject() {
               <ul className="text-green-800 space-y-2 text-sm leading-relaxed">
                 <li>
                   • <strong>Azure OpenAI:</strong> Drives the core LLM reasoning
-                  for natural language interpretation[cite: 1084].
+                  for natural language interpretation.
                 </li>
                 <li>
                   • <strong>Pandas:</strong> Powers on-the-fly KPI computation
-                  and high-speed data manipulation[cite: 1086, 1094].
+                  and high-speed data manipulation.
                 </li>
                 <li>
                   • <strong>Power BI Integration:</strong> Seamlessly interprets
-                  live dashboards into business-ready narratives[cite: 1024,
-                  1086, 1098].
+                  live dashboards into business-ready narratives.
                 </li>
               </ul>
             </div>
@@ -120,8 +118,7 @@ export default function PortSenseProject() {
                 <p className="text-gray-600 leading-relaxed">
                   A sophisticated system that autonomously selects the
                   appropriate analytics tool based on user prompts—from broad
-                  snapshot summaries to month-over-month trend analysis[cite:
-                  1065, 1068, 1070].
+                  snapshot summaries to month-over-month trend analysis.
                 </p>
               </div>
             </div>
@@ -139,7 +136,7 @@ export default function PortSenseProject() {
                 <p className="text-gray-600 leading-relaxed">
                   Bridges the "Narrative Gap" by using web search grounding to
                   correlate internal KPI drops with real-world drivers like
-                  extreme weather, strikes, or port congestion[cite: 1050].
+                  extreme weather, strikes, or port congestion.
                 </p>
               </div>
             </div>
@@ -158,7 +155,7 @@ export default function PortSenseProject() {
                   Provides forward-looking outlooks by analyzing geopolitical
                   and economic trends. Integrates live weather forecasts for
                   ports like Tuas and Pasir Panjang to mitigate environmental
-                  impacts[cite: 1071].
+                  impacts.
                 </p>
               </div>
             </div>
@@ -198,7 +195,7 @@ export default function PortSenseProject() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 Engineered responses to be auditable and deterministic by
                 returning structured JSON outputs defining the precise "who,
-                what, and when" for every computed result[cite: 1061].
+                what, and when" for every computed result.
               </p>
             </div>
           </div>
@@ -216,7 +213,7 @@ export default function PortSenseProject() {
                 Time to Insight
               </p>
               <p className="text-xs text-gray-500 mt-2">
-                Saves hours of manual data synthesis[cite: 1038].
+                Saves hours of manual data synthesis.
               </p>
             </div>
             <div>
@@ -227,7 +224,7 @@ export default function PortSenseProject() {
                 Strategic Alignment
               </p>
               <p className="text-xs text-gray-500 mt-2">
-                Aligned with PSA's global network strategy[cite: 1036, 1065].
+                Aligned with PSA's global network strategy.
               </p>
             </div>
             <div>
@@ -238,8 +235,7 @@ export default function PortSenseProject() {
                 Sustainability Links
               </p>
               <p className="text-xs text-gray-500 mt-2">
-                Identifies hidden links between wait times and bunker
-                savings[cite: 1054].
+                Identifies hidden links between wait times and bunker savings.
               </p>
             </div>
           </div>
@@ -251,8 +247,7 @@ export default function PortSenseProject() {
           <p className="text-gray-700 leading-relaxed mb-10">
             PortSense transforms overwhelmed maritime analysts into proactive
             decision-makers. By automating the data lifecycle—from ingestion to
-            explanation—we empower PSA's regions to act faster and
-            together[cite: 1039, 1040].
+            explanation—we empower PSA's regions to act faster and together.
           </p>
           <div className="flex gap-8">
             <Link
